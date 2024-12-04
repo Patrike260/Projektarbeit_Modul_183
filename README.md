@@ -18,11 +18,11 @@
 
 ### 2. Ist-PlantUML-Diagramm
 
-![Stichworter](S.jpg)
+![Ist-PlantUML-Diagramm](S.jpg)
 
 ### 3. Soll-PlantUML-Diagramm
 
-![Stichworter](S.jpg)
+![Soll-PlantUML-Diagramm](S.jpg)
 
 ### 4. Java-PasswordHashing
 
