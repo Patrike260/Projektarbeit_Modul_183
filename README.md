@@ -22,13 +22,10 @@ Die JogFit-App ist eine moderne Fitness-Anwendung, die Joggern hilft, ihre Leist
 
 #### Allgemeine Sicherheitsanforderungen
 
-Vertraulichkeit: Schutz der Benutzerdaten vor unbefugtem Zugriff.
-
-Integrität: Sicherstellen, dass Daten während der Übertragung oder Speicherung nicht manipuliert werden.
-
-Verfügbarkeit: Gewährleistung, dass die App und ihre Funktionen jederzeit zugänglich sind.
-
-Transparenz: Bereitstellung von Informationen über die Datenspeicherung und -nutzung für die Benutzer.
+**Vertraulichkeit:** Schutz der Benutzerdaten vor unbefugtem Zugriff.
+**Integrität:** Sicherstellen, dass Daten während der Übertragung oder Speicherung nicht manipuliert werden.
+**Verfügbarkeit:** Gewährleistung, dass die App und ihre Funktionen jederzeit zugänglich sind.
+**Transparenz:** Bereitstellung von Informationen über die Datenspeicherung und -nutzung für die Benutzer.
 
 #### Spezifische Sicherheitsanforderungen
 
