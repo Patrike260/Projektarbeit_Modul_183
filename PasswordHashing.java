@@ -27,7 +27,7 @@ public class PasswordHashing {
 
     public static void main(String[] args) {
         // Test-Passwörter
-        String[] testPasswords = {"123456", "Passwort123!", "sicheresPasswort", "babaPassword"}; //Hier PW eingeben
+        String[] testPasswords = {"wiss1234", "Passwort123!", "sicheresPasswort", "babaPassword"}; //Hier PW eingeben
 
         // Passwörter hashen und Ergebnisse anzeigen
         for (String password : testPasswords) {

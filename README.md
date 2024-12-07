@@ -208,6 +208,8 @@ public class PasswordHashing {
 
 ```
 
+!![JavaHashCode](javaHashCode.png)
+
 ### 5. Bat PasswordHashing
 
 ```
@@ -241,6 +243,8 @@ echo Programm beendet.
 pause
 
 ```
+
+!![batHesh](batHash.png)
 
 ## Hilfestellung
 
