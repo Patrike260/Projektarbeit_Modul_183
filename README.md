@@ -22,76 +22,79 @@ Die JogFit-App ist eine moderne Fitness-Anwendung, die Joggern hilft, ihre Leist
 
 #### Allgemeine Sicherheitsanforderungen
 
-**Vertraulichkeit:** Schutz der Benutzerdaten vor unbefugtem Zugriff.
-**Integrität:** Sicherstellen, dass Daten während der Übertragung oder Speicherung nicht manipuliert werden.
-**Verfügbarkeit:** Gewährleistung, dass die App und ihre Funktionen jederzeit zugänglich sind.
-**Transparenz:** Bereitstellung von Informationen über die Datenspeicherung und -nutzung für die Benutzer.
+**Vertraulichkeit:**  Schutz der Benutzerdaten vor unbefugtem Zugriff.
+
+**Integrität:**  Sicherstellen, dass Daten während der Übertragung oder Speicherung nicht manipuliert werden
+.
+**Verfügbarkeit:**  Gewährleistung, dass die App und ihre Funktionen jederzeit zugänglich sind.
+
+**Transparenz:**  Bereitstellung von Informationen über die Datenspeicherung und -nutzung für die Benutzer.
 
 #### Spezifische Sicherheitsanforderungen
 
-Zugriffskontrolle: Implementierung von rollenbasierten Berechtigungen.
+**Zugriffskontrolle:**  Implementierung von rollenbasierten Berechtigungen.
 
-Datenverschlüsselung: Verschlüsselung sensibler Daten sowohl bei der Übertragung als auch bei der Speicherung.
+**Datenverschlüsselung:**  Verschlüsselung sensibler Daten sowohl bei der Übertragung als auch bei der Speicherung.
 
-Sichere API: Absicherung der Schnittstellen gegen Angriffe wie Injection und Man-in-the-Middle.
+**Sichere API:**  Absicherung der Schnittstellen gegen Angriffe wie Injection und Man-in-the-Middle.
 
-Privatsphäre-Einstellungen: Benutzerdefinierte Steuerung über die Sichtbarkeit von Daten.
+**Privatsphäre-Einstellungen:**  Benutzerdefinierte Steuerung über die Sichtbarkeit von Daten.
 
 ### Identifizierte Sicherheitslücken
 
 #### Zentrale Datenspeicherung
 
-Beschreibung: Benutzerdaten und Laufdaten werden zentral auf einem Server gespeichert.
+**Beschreibung:**  Benutzerdaten und Laufdaten werden zentral auf einem Server gespeichert.
 
-OWASP-Kategorie: Sensitive Data Exposure (A02:2021).
+**OWASP-Kategorie:**  Sensitive Data Exposure (A02:2021).
 
-Risiko: Bei unzureichendem Schutz könnten unbefugte Zugriffe auf sensible Daten erfolgen.
+**Risiko:**  Bei unzureichendem Schutz könnten unbefugte Zugriffe auf sensible Daten erfolgen.
 
 #### Soziale Komponente
 
-Beschreibung: Freundeslisten und geteilte Erfolge sind für andere Nutzer sichtbar.
+**Beschreibung:**  Freundeslisten und geteilte Erfolge sind für andere Nutzer sichtbar.
 
-OWASP-Kategorie: Broken Access Control (A01:2021).
+**OWASP-Kategorie:**  Broken Access Control (A01:2021).
 
-Risiko: Unbefugte Nutzer könnten auf persönliche Daten zugreifen.
+**Risiko:**  Unbefugte Nutzer könnten auf persönliche Daten zugreifen.
 
 #### Datenübertragung und API-Sicherheit
 
-Beschreibung: Daten werden zwischen App, GPS-API und Server übertragen.
+**Beschreibung:**  Daten werden zwischen App, GPS-API und Server übertragen.
 
-OWASP-Kategorie: Security Misconfiguration (A05:2021).
+**OWASP-Kategorie:**  Security Misconfiguration (A05:2021).
 
-Risiko: Unverschlüsselte oder schlecht konfigurierte Schnittstellen könnten Angriffe wie Man-in-the-Middle ermöglichen.
+**Risiko:**  Unverschlüsselte oder schlecht konfigurierte Schnittstellen könnten Angriffe wie Man-in-the-Middle ermöglichen.
 
 ### Maßnahmen zur Behebung
 
 #### Zentrale Datenspeicherung
 
-Datenverschlüsselung: Verschlüsselung sensibler Daten mit AES-256 sowohl bei der Speicherung als auch bei der Übertragung.
+**Datenverschlüsselung:**  Verschlüsselung sensibler Daten mit AES-256 sowohl bei der Speicherung als auch bei der Übertragung.
 
-Zugriffsmanagement: Implementierung des Zero-Trust-Prinzips und rollenbasierter Zugriffsrechte.
+**Zugriffsmanagement:**   Implementierung des Zero-Trust-Prinzips und rollenbasierter Zugriffsrechte.
 
-Monitoring: Einsatz von Echtzeit-Analyse-Tools zur Erkennung unbefugter Zugriffe.
+**Monitoring:**  Einsatz von Echtzeit-Analyse-Tools zur Erkennung unbefugter Zugriffe.
 
-Dezentralisierung: Speicherung bestimmter Daten in dezentralen Strukturen, um die Angriffsfläche zu verringern.
+**Dezentralisierung:**  Speicherung bestimmter Daten in dezentralen Strukturen, um die Angriffsfläche zu verringern.
 
 #### Soziale Komponente
 
-Privatsphäre-Einstellungen: Nutzern die Möglichkeit geben, die Sichtbarkeit ihrer Daten individuell einzustellen.
+**Privatsphäre-Einstellungen:**  Nutzern die Möglichkeit geben, die Sichtbarkeit ihrer Daten individuell einzustellen.
 
-Anonymisierung: Anonymisierung von Nutzerdaten, bevor sie in sozialen Funktionen sichtbar werden.
+**Anonymisierung:**  Anonymisierung von Nutzerdaten, bevor sie in sozialen Funktionen sichtbar werden.
 
-Access Logs: Protokollieren aller Zugriffe auf soziale Daten, um Missbrauch nachzuvollziehen.
+**Access Logs:**  Protokollieren aller Zugriffe auf soziale Daten, um Missbrauch nachzuvollziehen.
 
 #### Datenübertragung und API-Sicherheit
 
-TLS-Verschlüsselung: Sicherstellen, dass alle Übertragungen mit TLS 1.3 verschlüsselt sind.
+**TLS-Verschlüsselung:**  Sicherstellen, dass alle Übertragungen mit TLS 1.3 verschlüsselt sind.
 
-Sichere Authentifizierung: Nutzung von OAuth 2.0 für API-Zugriffe.
+**Sichere Authentifizierung:**   Nutzung von OAuth 2.0 für API-Zugriffe.
 
-Input-Validierung: Validieren aller Eingaben an die API, um Injection-Angriffe zu verhindern.
+**Input-Validierung:**  Validieren aller Eingaben an die API, um Injection-Angriffe zu verhindern.
 
-Penetration Tests: Regelmäßige Sicherheitsüberprüfungen der Schnittstellen.
+**Penetration Tests:**  Regelmäßige Sicherheitsüberprüfungen der Schnittstellen.
 
 ### Schwachstellen nach OWASP Top 10 identifiziert
 
