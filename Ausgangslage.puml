@@ -1,0 +1,100 @@
+@startuml
+
+actor Benutzer
+
+participant "JogFit-App" as App
+participant "Server" as Server
+participant "Cloud" as Cloud
+participant "GPS-API" as GPS
+
+' Haupt-Ablauf der App
+Benutzer --> App : Login/Registrierung
+App --> Server : Benutzerinformationen speichern
+App --> GPS : Laufdaten abrufen
+GPS --> App : Laufdaten zurückgeben
+App --> Server : Laufdaten speichern
+Server --> Cloud : Daten synchronisieren
+Benutzer <-- App : Statistiken anzeigen
+
+' Soziale Komponente
+Benutzer --> App : Erfolge teilen/Freunde hinzufügen
+App --> Server : Soziale Daten speichern
+Server --> Benutzer : Freundeslisten/Erfolge abrufen
+
+' Schwachstellen visualisieren
+note right of Server #FF0000
+"Daten werden zentral gespeichert"
+end note
+
+note right of App #FF0000
+"Soziale Komponente: Privatsphäre"
+end note
+
+note right of App #FF0000
+"Datenübertragung: API-Sicherheit"
+end note
+
+@enduml
+
+' Separate Schwachstellenanalysen
+
+' Schwachstelle: Zentrale Datenspeicherung
+@startuml
+actor Benutzer
+
+participant "JogFit-App" as App
+participant "Server" as Server
+participant "Cloud" as Cloud
+
+Benutzer --> App : Login/Registrierung
+App --> Server : Benutzerinformationen speichern
+Server --> Cloud : Daten synchronisieren
+
+note right of Server #FF0000
+"Risiko: Unbefugte Datenabfrage"
+end note
+
+@enduml
+
+' Schwachstelle: Soziale Komponente
+@startuml
+actor Benutzer
+
+participant "JogFit-App" as App
+participant "Server" as Server
+
+Benutzer --> App : Erfolge teilen/Freunde hinzufügen
+App --> Server : Soziale Daten speichern
+Server --> Benutzer : Freundeslisten/Erfolge abrufen
+
+note right of App #FF0000
+"Risiko: Zugriff auf sensible Daten anderer Nutzer"
+end note
+
+@enduml
+
+' Schwachstelle: Datenübertragung und API
+@startuml
+actor Benutzer
+
+participant "JogFit-App" as App
+participant "Server" as Server
+participant "GPS-API" as GPS
+
+Benutzer --> App : Laufdaten aufzeichnen
+App --> GPS : Laufdaten abrufen
+GPS --> App : Laufdaten zurückgeben
+App --> Server : Laufdaten speichern
+
+note right of App #FF0000
+"Risiko: Datenabgriff während der Übertragung"
+end note
+
+@enduml
+
+' Soll-Diagramm '
+@startuml
+actor Benutzer
+
+participant 
+@enduml
