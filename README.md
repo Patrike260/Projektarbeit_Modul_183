@@ -116,8 +116,47 @@ Durch die Implementierung der beschriebenen Maßnahmen kann die Sicherheit der J
 
 ### 2. Ist-PlantUML-Diagramm
 
-![Stichworter](Soll-Diagramm.png)
-![Ist-PlantUML-Diagramm](S.jpg)
+![Ist-PlantUML-Diagramm](Ist-Diagramm.png)
+
+```
+@startuml
+
+actor Benutzer
+
+participant "JogFit-App" as App
+participant "Server" as Server
+participant "Cloud" as Cloud
+participant "GPS-API" as GPS
+
+' Haupt-Ablauf der App
+Benutzer --> App : Login/Registrierung
+App --> Server : Benutzerinformationen speichern
+App --> GPS : Laufdaten abrufen
+GPS --> App : Laufdaten zurückgeben
+App --> Server : Laufdaten speichern
+Server --> Cloud : Daten synchronisieren
+Benutzer <-- App : Statistiken anzeigen
+
+' Soziale Komponente
+Benutzer --> App : Erfolge teilen/Freunde hinzufügen
+App --> Server : Soziale Daten speichern
+Server --> Benutzer : Freundeslisten/Erfolge abrufen
+
+' Schwachstellen visualisieren
+note right of Server #FF8600
+"Daten werden zentral gespeichert"
+end note
+
+note right of App #FF8600
+"Soziale Komponente: Privatsphäre"
+end note
+
+note right of App #FF8600
+"Datenübertragung: API-Sicherheit"
+end note
+
+@enduml
+```
 
 ### 3. Soll-PlantUML-Diagramm
 

@@ -22,15 +22,15 @@ App --> Server : Soziale Daten speichern
 Server --> Benutzer : Freundeslisten/Erfolge abrufen
 
 ' Schwachstellen visualisieren
-note right of Server #FF0000
+note right of Server #FF8600
 "Daten werden zentral gespeichert"
 end note
 
-note right of App #FF0000
+note right of App #FF8600
 "Soziale Komponente: Privatsphäre"
 end note
 
-note right of App #FF0000
+note right of App #FF8600
 "Datenübertragung: API-Sicherheit"
 end note
 
