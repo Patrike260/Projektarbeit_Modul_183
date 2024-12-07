@@ -18,7 +18,7 @@
 
 ### 2. Ist-PlantUML-Diagramm
 
-![Stichworter](S.jpg)
+![Stichworter](Soll-Diagramm.png)
 
 ### 3. Soll-PlantUML-Diagramm
 
