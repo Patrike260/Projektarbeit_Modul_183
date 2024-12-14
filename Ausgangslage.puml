@@ -21,7 +21,7 @@ Benutzer --> App : Erfolge teilen/Freunde hinzufügen
 App --> Server : Soziale Daten speichern
 Server --> Benutzer : Freundeslisten/Erfolge abrufen
 
-' Schwachstellen visualisieren
+' Schwachstellen visualisiert
 note right of Server #FF8600
 "Daten werden zentral gespeichert"
 end note
