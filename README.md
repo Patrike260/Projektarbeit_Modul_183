@@ -158,7 +158,7 @@ end note
 @enduml
 ```
 
-### 3. Lösungsvorschläge-PlantUML-Diagramm
+### 3. Lösungsvorschläge-PlantUML-Diagramme
 
 ![LösungZentraleDatenspeicherung](LösungZentraleDatenspeicherung.png)
 ![LösungSozialeKomponente](LösungSozialeKomponente.png)
