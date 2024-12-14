@@ -56,6 +56,23 @@ end note
 
 @enduml
 
+' Lösungsvorschlag: Zentrale Datenspeicherung
+
+@startuml
+actor Benutzer
+
+participant "JogFit-App" as App
+participant "Server" as Server
+participant "Cloud" as Cloud
+
+Benutzer --> App : Login/Registrierung
+App --> Server : Benutzerinformationen speichern
+Server --> Cloud : Daten synchronisieren
+
+App -[#Green]-> Server : Datenverschlüsselung (AES-256)
+Server -[#Green]-> Cloud : Verschlüsselte Daten synchronisieren
+@enduml
+
 ' Schwachstelle: Soziale Komponente
 @startuml
 actor Benutzer
@@ -71,6 +88,21 @@ note right of App #FF0000
 "Risiko: Zugriff auf sensible Daten anderer Nutzer"
 end note
 
+@enduml
+
+' Lösungsvorschlag: Soziale Komponente
+@startuml
+actor Benutzer
+
+participant "JogFit-App" as App
+participant "Server" as Server
+
+Benutzer --> App : Erfolge teilen/Freunde hinzufügen
+App --> Server : Soziale Daten speichern
+Server --> Benutzer : Freundeslisten/Erfolge abrufen
+
+App -[#Green]-> Benutzer : Privatsphäre-Einstellungen konfigurieren
+Server -[#Green]-> App : Anonymisierte Daten bereitstellen
 @enduml
 
 ' Schwachstelle: Datenübertragung und API
@@ -92,9 +124,20 @@ end note
 
 @enduml
 
-' Soll-Diagramm '
+' Lösungsvorschlag: Datenübertragung und API
 @startuml
 actor Benutzer
 
-participant 
+participant "JogFit-App" as App
+participant "Server" as Server
+participant "GPS-API" as GPS
+
+Benutzer --> App : Laufdaten aufzeichnen
+App --> GPS : Laufdaten abrufen
+GPS --> App : Laufdaten zurückgeben
+App --> Server : Laufdaten speichern
+
+App -[#Green]-> GPS : Verschlüsselte Übertragung (TLS 1.3)
+GPS -[#Green]-> App : Verschlüsselte Antwort (TLS 1.3)
+App -[#Green]-> Server : Authentifizierung via OAuth 2.0
 @enduml
